@@ -1,0 +1,31 @@
+[id$='-box']{
+    padding: 10px;
+    margin:  10px;
+}
+
+[id$='-box']> :nth-child(even){
+    border: solid #EA5353 3px;
+}
+
+
+[id$='-box']> :nth-child(odd){
+    border: solid #E0467E 3px;
+}
+
+#span-box{
+    border: #C04FA4 3px solid;
+    
+}
+
+/*기본 display 속성은 얼마든지 수정이 가능하다*/
+#span-box>span{
+    display:  block;
+}
+
+#div-box{
+    border: seagreen 3px solid;
+    
+}
+#div-box>div{
+    display: inline;
+}

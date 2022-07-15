@@ -1,0 +1,13 @@
+ul,ol{
+    list-style-type: none;
+    padding : 5px;
+    border: solid 2px royalblue;
+}
+
+li{
+    border: solid 2px black;
+    padding: 3px;
+}
+b{
+    font-size: 0.5rem;
+}

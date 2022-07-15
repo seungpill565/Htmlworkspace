@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 다루기</title>
+    <link rel="stylesheet" href="../assets/css/js06.css">
+</head>
+<body>
+
+    <h3># javascript String</h3>
+
+    <div id="out"></div>
+
+    <script>
+
+        print('hello!');
+        print('hello!');
+        print('hello!');
+        print('hello!');
+        print('hello!');
+
+
+        const emplotees = "smith/king/steve/nina/paul";
+
+        //length
+        print('length: ' + emplotees.length);
+
+        //substring
+        print('substr:'+ emplotees.substring(3,17));// start, end
+        print('substr:'+ emplotees.substring(17));//index 부터 맨 뒤 까지 자름
+
+        //upper,lower
+        print('upper :' + emplotees.toUpperCase());
+        print('upper :' + emplotees.toLowerCase());
+        
+        //charAt
+        print('charAt: '+ emplotees.charAt(5));
+
+        //split
+
+        let empArray = emplotees.split('/');
+
+        for(i in empArray){
+            print(`emp[${i}]: ${empArray[i]}`);
+        }
+
+        //indexof
+        const email = 'abc123@naver.com';
+
+        print(`indxOF '@' : ${email.indexOf('@')}`);
+
+        //search : 정규표현식을 사용해 원하는 문자열을 찾는다
+        print('search:' + emplotees.search('in'));
+        print('search:' + emplotees.search(/.in./));
+        
+        //match : 해당 정규표현식과 일치하는 것들을 반환한다(뒤에 g를 붙어야 한다.)
+        for(matchResult of  emplotees.match(/.in./g)){
+            print('match:' + matchResult);
+        }
+
+
+        //includes
+        print('includes mins?' + emplotees.includes('minsu'));
+        print('includes smith?' + emplotees.includes('smith'));
+
+        //startswith
+        const url = 'http://naver.com';
+
+        print('startswith: ' + url.startsWith('https://'));
+        print('startswith: ' + url.startsWith('http://'));
+        
+        //endswith
+        print('startswith: ' + url.endsWith('co.kr'));
+        print('startswith: ' + url.endsWith('net'));
+        
+        
+        // fuction으로 선언하는 함수는 밑에 선언해도 먼저 컴파일 된다
+        function print(obj){
+            document.getElementById('out').innerHTML +='root$ '+ obj+'<br>';
+        }
+    </script>
+    
+</body>
+</html>

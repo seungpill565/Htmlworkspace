@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS에서 크기를 나타내는 단위들</title>
+    <style>
+        /* rem 단위는 html 태그에 적용된 font-size에 비례하여 크기를 의미한다.*/
+        html{
+            font-size: 30px;
+        }
+        #abs{
+            font-size: 20px;
+        }
+        #abs > li:nth-child(2){
+            font-size: 20mm;
+        }
+        #abs> li:nth-child(3){
+            font-size: 20cm;
+        }
+        #abs>li:nth-child(4){
+            font-size: 3in;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3> #절대 길이 단위</h3>
+
+    <ul id="abs">
+        <li> px : 필셀(화소)</li>
+        <li> mm : 밀리미터</li>
+        <li> cm : 센치미터</li>
+        <li> in : 인치</li>
+    </ul>
+
+    <h3># 상대 길이 단위</h3>
+
+    
+
+    <ul id="rel">
+        <li>em : 현재 요소에 적영된 font-size에 비례한 크기 조절 <br> 
+            ex> 2.0em 일때 현재 요소의 font-size의 2배 크기
+        </li>
+        <li>
+            rem : 현재 페이지의 전체(html)에 적용된 font-size에 비례한 크기 조절 <br>
+            ex > 2.0rem 일때 현재 페이지 전체 font-size의 2배 크기
+        </li>
+        <li style="font-size: 4vw;">
+            vh : viewport width 현재 웹페이지를 보고있는 프로그램의 너비에 비례한 크기조절<br>
+            ex > 1vw는 viewport width의 1%크기
+        </li>
+
+        <li style="font-size: 4vh;">
+            vh : viewport height viewport에 높이에 비례한 크기 조절<br>
+            ex > 1vh는 viewport heigth의 크기 1%크기
+
+        </li>
+
+    </ul>
+
+
+    <hr>
+
+    <div style="border: solid 3px black; width: 5.0em; height : 5.0em; font-size: 2cm;">
+        5.0em
+    </div>
+
+    <div style="border : solid 3px black;width: 5.0rem; height : 5.0rem; font-size: 20px;">
+        5.0rem
+    </div>
+
+
+    
+</body>
+</html>

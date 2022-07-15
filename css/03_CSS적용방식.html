@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 적용하기</title>
+   
+    <style>
+
+        dt:first-of-type{
+            color: yellow;
+            font-size: 100px;
+        }
+        dt:nth-of-type(2){
+            color:navy;
+            font-size: 30px;
+        }
+        dt:nth-of-type(3){
+         color: darkcyan;   
+        }
+    </style>
+        
+    <style>
+        dt:nth-of-type(2){
+            color: red;
+            font-size: 15px;
+        }
+        
+    </style>
+     <link rel="stylesheet" href="../assets/css/css03.css">
+
+</head>
+<body>
+
+    <h3># 페이지에 스타일시트를 적용하는 방법 3가지</h3>
+    
+    <dl>
+        <dt style="color: blueviolet; font-size : 50px">1.inline CSS</dt>
+        <dd>
+            - 줄 내부에서 CSS를 적용하는 방식 <br>
+            - 해당 요소의 style 속성에 스타일을 직접 정의하는 방식 <br>
+            - CSS 적용 우선 순위가 가장 높다
+        </dd>
+        <dt>2.internal CSS</dt>
+        <dd>
+            - 페이지 내부에서 CSS를 적용하는 방식 <br>
+            - 해당 페이지의 style 태그에 스타일을 직접 정의하는 방식 <br>
+            - 더 나중에 정의된  스타일시트가 앞의 시트를 덮어쓴다
+        </dd>
+        <dt>3.external CSS</dt>
+        <dd>
+            - 외부의 .css 파일을 불러와 페이지에 적용하는 방식 <br>
+            - link 태그를 사용해 외부의 css 파일을 불러올수 있다. <br>
+            - 더 나중에 정의된  스타일시트가 앞의 시트를 덮어쓴다
+        </dd>
+    </dl>
+
+</body>
+</html>

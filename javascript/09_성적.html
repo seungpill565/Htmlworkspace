@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적</title>
+    <link rel="stylesheet" href="../assets/css/js06.css">
+    <link rel="stylesheet" href="../assets/css/js09.css">
+</head>
+<body>
+
+    <h3>성적</h3>
+    <div id="out"></div>
+
+    <script>
+        /*
+            1. 국어.영어.수학 랜덤 점수를 가진 학생 100명을 자카스크립트 오브젝트로 생성한다
+            2. map을 이용해 모든 학생들의 평균 점수 배열을 생성한다.
+            3. filter 을 이용해 평균 점수가 70점 이하인 학생들로 이루어진 배열을 생성하여
+                html 테이블 태그로 출력한다
+            4. 평균 점수가 30점 이하인 학생은 빨간 글씨로 출력한다
+        */
+        const getRandomScore = ()=> parseInt(Math.random()*101);
+
+        const getRandomStudent= (i)=>{
+            return{
+              stuNum: i,
+               kor : getRandomScore(),
+               eng : getRandomScore(),
+              math : getRandomScore(),
+               getAvg : function(){
+               return ( this.kor + this.eng + this.math)/3;
+               }
+            };
+        };
+
+
+        let students = [];
+
+        for( i=0; i<100; i++){
+            students.push(getRandomStudent(i));
+        }
+
+        // for(student of students){
+        //     print(`학생 :${student.stuNum +1} 평균 : ${student.getAvg()}`)
+        // }
+
+            //학생 : 평균점수  새로운 배열만들기
+            const stuAvgs = students.map((student)=> [student.stuNum, student.getAvg()]);
+
+            //필터 이용해서 배열의 1(평균점수) 70점이하로 
+            const under70s = stuAvgs.filter((stuAvg)=>{
+                return stuAvg[1] <=70;
+            })
+
+
+            //테이블만들기
+            let under70sTable = '<table id ="under70"><tr><th>번호</th><th>평균</th></tr>';
+                
+            //하나씩들어가야하니깐 foreach
+            under70s.forEach((under70) =>{
+
+                under70sTable +=under70[1]<30 ? '<tr class = "danger">' : '<tr class = "safe">';
+                under70sTable +=`<td>학생${under70[0]}</td><td>${under70[1].toFixed(2)}</td>`;
+                under70sTable +='<tr>';
+
+
+
+                // print(`학생${under70[0]}: ${under70[1]}`)
+            });
+            under70sTable += '</table>'
+
+            //화면에 출력
+            document.getElementById('out').innerHTML += under70sTable;
+
+
+
+        
+        
+       
+        
+
+
+
+
+    </script>
+
+       
+
+        
+    
+</body>
+</html>

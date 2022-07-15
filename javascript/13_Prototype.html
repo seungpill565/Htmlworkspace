@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+
+    <h3># 자바스크립트에서 클래스와 인스턴스를 생성하기</h3>
+
+    <ul>
+        <li>자바스크립트에서 클래스를 정의하면 해당 클래스의 원형을 프로토타입이라고 부른다</li>
+        <li>클래스 이름에 .을찍고 prototype 필드를 이용해 클래스의 원형에 접근할 수 있다</li>
+        <li>한 인스턴스를 통해 프로토타입을 수정하더라도 모든 인스턴스가 영향을 받는다</li>
+    </ul>
+
+    <script>
+        //JavaScript Constructor
+
+        function Coffee(name, price, ice){
+            this.name = name;
+            this.price = price;
+            this.ice = ice;
+
+           this.toStirng = function() {
+                return`I am toString.`;
+            } 
+            
+        }
+
+        //인스턴스 생성
+        const c1 = new Coffee('아메리카노',17000,true);
+        const c2 = new Coffee('카페라떼',2200);
+
+        console.log(c1);
+        console.log(c2);
+
+        //consle.dir : 해당 요소를 좀 더 계층적으로 볼 수 있다.
+        console.dir(Coffee);
+        console.log(Coffee.prototype);
+
+        //프토로타입에 접근하여 아까 만들었던 클래스를 직접 수정할 수 있다.
+        Coffee.prototype.drink = function(){
+            console.log('프로토 타입으로 추가되었습니다.');
+
+
+            //Arrow Fuction으로는 인스턴스 활용은 안되므로 
+            //반드시 Function 키워드를 이용해야 한다.
+            console.log('name :',this.name)
+            console.log('price :',this.price)
+            console.log('ice :',this.sice)
+        }
+
+
+        // Javascript overriding
+        Coffee.prototype.toStirng = function(){
+            return  `${this.name}[${this.price}]`;
+        };
+
+        // 해당 인스턴스 메서드 수정
+        c1.toStirng = function() {
+            return `modified toStirng.`;
+        }
+
+        c1.drink();
+        c2.drink();
+
+        console.dir(c1);
+
+        console.log(c1.toStirng());
+        console.log(c2.toStirng());
+
+        console.dir(c1);
+
+        const c3 = new Coffee('Mocha',2900,false);
+
+        console.log(c1.toStirng());
+        console.log(c2.toStirng());
+        console.log(c3.toStirng());
+        
+    </script>
+
+    
+</body>
+</html>

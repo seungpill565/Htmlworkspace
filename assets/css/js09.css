@@ -1,0 +1,24 @@
+#under70 th, #under70 td{
+    padding:  3px 5px;
+}
+
+#under70 tr:nth-child(even){
+    background: white;
+}
+
+#under70 tr:nth-child(odd){
+    background: rgb(112, 45, 45);
+}
+
+#under70  tr:first-child{
+    background: navy;
+    color: white;
+}
+
+.danger{
+    color: red;
+    font-weight: 900;
+}
+.safe{
+    color: black;
+}

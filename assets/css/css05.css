@@ -1,0 +1,96 @@
+#border-style-list{
+    list-style-type: none;
+    background-color: blanchedalmond;
+}
+#border-style-list > li {
+    border: solid black 5px;
+    padding : 5px;
+    margin: 3px;
+}
+#border-style-list > :first-child{
+    border-color:  brown;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#border-style-list > :nth-child(2){
+    border-color: darkgreen;
+    border-style: dashed;
+}
+
+
+#border-style-list > :nth-child(3){
+    border-color: darkorchid;
+    border-style: dotted;
+}
+
+#border-style-list > :nth-child(4){
+    border-color: crimson;
+    border-style: double;
+}
+#border-style-list > :nth-child(5){
+    border-color:   mediumslateblue;
+    border-style: groove;
+    border-width: 10px;
+}
+#border-style-list > :nth-child(6){
+    border-color:   cornflowerblue;
+    border-style: ridge;
+    border-width: 10px;
+}
+#border-style-list > :nth-child(7){
+    border-color:   chartreuse;
+    border-style: inset;
+    border-width: 10px;
+}
+#border-style-list > :nth-child(8){
+    border-color:   aqua;
+    border-style: outset;
+    border-width: 10px;
+}
+#border-style-list > :nth-child(9){
+    border-color:   aqua;
+    border-style: none;
+    border-width: 10px;
+}
+#border-style-list > :nth-child(10){
+    border-color:  aqua;
+    border-style: hidden;
+    border-width: 10px;
+}
+
+#multi-value-list{
+    background-color: chocolate;
+    list-style-type: none;
+    color: white;
+}
+/*값을 하나 주는 경우 : 모든 방향에 적용됨*/
+#multi-value-list > :first-child{
+    border-style: dotted;
+    border-width: 5px;
+    border-color: black;
+}
+/*값을 두개 주는 경우 : (1)위/아래 (2)왼/오로 적용됨*/
+#multi-value-list > :nth-child(2){
+    border-style: double ridge;
+    border-width: 5px 10px;
+    border-color: red blue;
+}
+
+/*값을 세 개 주는 경우 : (1)위 (2)왼/오 (3)아래 로 적용됨*/
+#multi-value-list >  :nth-child(3){
+    border-style: solid;
+    border-width: 5px;
+    border-color:  red blue yellow;
+}
+
+/*값을 세 개 주는 경우 : (1)위 (2)오 (3)아래 (4) 왼로 적용됨*/
+#multi-value-list >  :nth-child(4){
+    border-style: solid dashed dotted inset;
+    border-width: 5px;
+    border-color:  red blue yellow lime;
+}
+#multi-value-list>li{
+    margin: 5px;
+    padding:3px;
+}

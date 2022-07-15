@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/js12.css">
+    <title>Node</title>
+</head>
+<body>
+
+    <h3># Node</h3>
+
+    <ul>
+        <li>document 에 속해있는 모든 것을 Node 라고 부른다.</li>
+        <li>Node는 Element Node와 Text Node 로 나뉜다</li>
+        <li>주석은 comment Node라고 한다</li>
+    </ul>
+
+    <button id="push-btn">push!</button>
+    <button id="pop-btn">pop!</button>
+    
+    
+
+
+
+    <!--연습1. 버튼을 누르면 content 내부의 홀수번째 배경 이미지가 다른 과일로 변경되도록 만들어보세요-->
+    <button id ="changebtn">change Fruit</button>
+    <!--연습 2 버튼을 누르면 짝수번째 요소들이 360도 회전하게 만들어보세요 (CSS animation)-->
+    <button id = "rotatebtn">Rotate Fruit</button>
+
+    <button id="rollbackbtn">backRotate Fruite</button>
+    <hr>
+    <div id="content"></div>
+
+    <script>
+        const pushBtn = document.getElementById('push-btn');
+        const popBtn = document.getElementById('pop-btn');
+
+        const content = document.getElementById('content');
+
+        let index = 1;
+
+        const rotateInfo =[];
+
+        pushBtn.addEventListener('click' ,(e) =>{
+            //자바스크립트로 요소 생성해서 추가하기
+            const newElement = document.createElement('div');// Element Node
+            const newTextNode = document.createTextNode(index++);
+            
+            //텍스트 노드를 자식으로 추가하기
+            newElement.appendChild(newTextNode);
+
+            //텍스트 노드가 추가된 새 요소를 자식으로 추가
+            content.appendChild(newElement);
+
+            rotateInfo.push(1);
+            console.log(rotateInfo);
+
+        });
+
+        popBtn.addEventListener('click', (e)=>{
+            // const lastDiv = document.getElementById('content').child[];
+            const lastDiv = document.querySelector('#content> div:last-child');
+
+            lastDiv.remove();
+        });
+
+        
+        const changebtn = document.getElementById('changebtn');
+        const bannanaimage = ()=>"url(../assets/image/banana.jpg)";
+        
+        changebtn.addEventListener('click', (e)=>{
+            const oddimage = document.querySelectorAll('#content>div:nth-child(odd)');    
+             console.log(oddimage);
+             for(image of oddimage){
+                image.style.backgroundImage = bannanaimage();
+             }
+        });
+
+
+
+        const rotatebtn = document.getElementById('rotatebtn');
+        rotatebtn.addEventListener('click',(e) =>{
+            const evenimage = document.querySelectorAll('#content>div:nth-child(even)');
+            console.log(evenimage);
+            for(image of evenimage){
+                const index = Number(image.innerText);
+
+                image.style.transform =`rotate(${rotateInfo[index-1]}turn)`; 
+                image.style. transitionDuration = '1s';
+                rotateInfo[index-1]++;
+             }
+        });
+
+        const rollrotaebtn = document.getElementById('rollbackbtn');
+
+        rollrotaebtn.addEventListener('click',(e)=>{
+            const oddbtns = document.querySelectorAll('#content>div:nth-child(odd)');
+            
+            for(oddbtn of oddbtns){
+                const index = Number(oddbtn.innerText);
+
+                oddbtn.style.transform = `rotate(-${rotateInfo[index-1]}turn)`; 
+                oddbtn.style. transitionDuration = '1s';
+                rotateInfo[index-1]++;
+            }
+        })
+
+        
+    </script>
+    
+</body>
+</html>

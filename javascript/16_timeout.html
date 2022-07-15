@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이머 설정하기</title>
+</head>
+<body>
+
+    <h3> # window.setTimeout(callback, time)</h3>
+
+    <p>원하는 시간만큼 기다린 후에 콜백함수를 한 번 실행한다.</p>
+
+    <h3># window.setInterval(callback, time)</h3>
+
+    <p>원하는 시간마다 해당 함수를 실행한다</p>
+
+    <h3># clearInterval(interval), clearTimeout(timeout)</h3>
+
+    <p>전달한 인터벌과 타이버를 제거하는 함수</p>
+
+    <div id ="out"></div>
+    
+    <button id="stop">stop</button>
+
+    <script>
+        const myInterval = setInterval(() =>{
+            document.getElementById('out').innerText = new Date()
+        }, 1000); //1000ms = 1s
+
+        document.getElementById('stop').addEventListener('click',()=>{
+            clearInterval(myInterval);
+        })
+    </script>
+    
+</body>
+</html>

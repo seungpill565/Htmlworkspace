@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순차적으로 처리하기</title>
+    <link rel="stylesheet" href="../assets/css/js06.css">
+</head>
+<body>
+
+    <h3># 순차적으로 처리하기</h3>
+
+    <div id="out"></div>
+    
+    <script>
+        const numbers = [10,20,30,40,50,60,70,80,90];
+        const fruits = ['apple','banana','orange','kiwi','mango','pineapple'];
+
+    //forEach - 배열의 모든 값을 순차적으로 해당 함수에 적용한다(리턴 X)
+    //          내부의 콜백 함수에는 값, 인덱스, 전체 배열이 전달된다   
+
+
+        numbers.forEach(f1);
+        numbers.forEach(function (value){
+            print(`${value}-5=${value-5}`);
+        });
+        numbers.forEach(function (value, index, arr){
+            console.log('콜백으로 받은 전체 배열의 내용: ' +arr);
+            print(`${index}번째 사람의 점수 ${value}`)
+        });
+        
+        //map - 모든 값을 순차적으로 해당 함수에 적용한 새로운 배열을 생성하여 반환한다
+
+        const scores =['90',9999,100,'99',80,88,'77',66 ,'55',33];
+        
+        //callbackfn 은 어차피 외부에서 호출하여 사용할 수 없으므로 이름이 필요없다 (익명)
+        const grades = scores.map(function(value,index,arr){
+            if(value >100|| value<0){
+                return 'Z'
+            }
+            else if (value>=90){
+                return 'A';
+            }else if(value >=80){
+                return 'B';
+            }else if(value >=70){
+                return 'C';
+            }else if(value>=60){
+                return 'D';
+            }
+            else{
+                return 'F';
+            }
+
+        });
+
+        
+
+        //Arrow Fuction 
+
+        const listitems = fruits.map((values) =>{
+            return `<li>${values}</li>`;
+        });
+
+
+
+        //함수의 내용이 단 한줄이고, 리턴하는 것인 경우 더욱 줄여서 표현이 가능하다
+        const numbers2 = numbers.map((value) => value *2);//return value *2;
+
+        const fruitsImages = fruits.map((value) => `<img src = "../assets/images/${value}">`);
+
+        print(numbers2);
+        
+        print(grades);
+        
+        print(listitems);
+
+
+        //filter - 배열의 모든 값들 중 특정 조건을 만족하는 값만 남긴 배열을 반환한다
+        //         콜백은 boolean 결과를 리턴해야 한다
+
+        numbers.push(11,13,15,99,18,21,23,25,9,9,8,8);
+
+        const evens = numbers.filter((value) => value % 2 == 0);
+        const odd = numbers.filter((num) => num % 2 == 1);
+
+        print('짝수들 :'+evens);
+        print('홀수들 : ' + odd);
+
+
+        function f1(value) {
+            print(`${value}*2=${value*2}`)
+        }
+
+        //innerHtml : 태그를 추가하면 태그가 적용된다
+        //innerText : 태그를 추가해도 태그가 적용되지 않는다.
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+    function print(obj){
+        
+        document.getElementById('out').innerHTML += '$' + obj + '<br>';
+    }
+///////////////////////////////////////////////////////////////////////////////////////
+    </script>
+
+       
+
+        
+    
+</body>
+</html>

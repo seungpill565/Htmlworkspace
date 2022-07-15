@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataset 속성</title>
+</head>
+<body>
+
+    <h3># dataset attribute</h3>
+    
+    <ul>
+        <li>HTML의 속성에 데이터를 정의하고 자바스트립트에서 읽는 방식</li>
+        <li>HTML에서 자바스크립트로 데이터를 전달하고 싶은 경우에 사용한다</li>
+    </ul>
+
+    <div id="rect" style="width:100px;height:100px;border: solid 3px black; margin-bottom: 10px;"></div>
+
+    <!-- data 뒤에 원하는 변수명을 설정하면 자바스크립트에서 접근하여 사용할 수 있다-->
+    <button data-size="25px"    data-bg-color="red">개나리버튼</button>
+    <button data-size="4cm"     data-bg-color="purple">잔디색</button>
+    <button data-size="lin"     data-bg-color="orange">환타</button>
+    <button data-size="10vw"    data-bg-color="teal">제로콜라</button>
+    <button data-size="15vh"    data-bg-color="silver">옥수수맛</button>
+
+    <script>
+        //colorBtns에 버튼이 다섯개 들어있음
+        const colorBtns = document.querySelectorAll('[data-bg-color]');
+        const rect = document.getElementById('rect')
+        function colorchangeEvent(e){
+            //e.target : 방금 이벤트를 발생시킨 요소가 들어있다.
+            const btn = e.target;
+            const dataset = e.target.dataset
+            
+            //data-* 속성의 값을 data- 뒤의 이름으로 데이터를 꺼낼수 있다.
+            // console.log('data-bg-color:',btn.dataset.bgColor);
+             //rect.style.background =  e.target.dataset.bgColor;
+             rect.style.background =  dataset.bgColor;
+             rect.style.width = dataset.size;
+            
+        }
+
+        //forEach로 colorBtns의 버튼을 하나씩꺼내며 원하느 작업을 모두 적용한다.
+        colorBtns.forEach((btn) =>{
+            btn.addEventListener('click',colorchangeEvent);
+        });
+    </script>
+</body>
+</html>

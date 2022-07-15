@@ -1,0 +1,58 @@
+div{
+    border: solid 3px black;
+    height: 300px;
+}
+
+div:first-child{
+    height: 1000px;
+    
+    background-image: url('../image/apple.jpg');/*이미지 경로 설정*/
+
+    /* 이미지 크기 설정*/
+    background-size: 100px 100px;/*값을 두개 입력 너비/높이 설정 */
+    background-size: 200px; /*값을 하나 입력 : 너비만 설정 (높이는 자동으로 비율 맞춤)*/
+
+    /*  
+        배경 반복 여부 설정 
+
+        repeat : default
+        round : 반복 시킴(이미지 비율이 약간 깨지는것도 허용)
+        space : 반복 시킴(이미지 사이의 거리를 통해 크기 조절)
+        repeat-x : 가로로 반복되는 배경
+        repeat-y : 세로로 반복되는 배경
+        no repeat : 반복을 안함
+    */
+    background-repeat: no-repeat;
+    /*
+        배경의 위치 설정
+
+        - top,bottom,center,left,right 를 다양하게 조합하여 설정할 수 있다
+        - 원하는 수치를 넣을 수도 있다
+        - x와 y를 따로 설정할수 있다.
+    */
+    background-position: bottom center;
+    background-position-x: 300px;
+    background-position-y: 100px;
+}
+
+/* background size contain : 배경을 해당 박스에 전부 담으려는 크기 조절*/
+div:nth-child(2){
+    background-image: url('../image/apple.jpg');
+    background-repeat: no-repeat;
+    height: 800px;
+    background-size: contain;
+}
+/* background size cover : 배경으로 해당 박스를 전부 덮으려는 크기 조절*/
+div:nth-child(3){
+    background-image: url('../image/apple.jpg');
+    background-repeat: no-repeat;
+    height: 800px;
+    background-size: cover;
+}
+/*background - attachment : fixed - 배경을 우리 웹 브라우저(viewport)에 고정시킨다*/
+div:nth-child(4){
+    background-image: url('../image/apple.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+}

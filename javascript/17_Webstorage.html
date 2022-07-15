@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Storage</title>
+</head>
+<body>
+
+    <h3># Web Storage API</h3>
+
+    <ul>
+        <li>웹 브라우저가 제공하는 데이터 저장공간</li>
+        <li>사용자의 웹 브라우저에 웹 페이지를 운용하는데에 필요한 데이터를 보관할 수 있다</li>
+        <li>데이터 Key-Value 형태로 저장해놓을 수 있다</li>
+        <li>로컬 스토리지는 웹 브라우저를 종료하더라도 데이터가 유지된다</li>
+        <li>세션 스토리지는 웹 브라우저를 종료하면 데이터가 삭제된다</li>
+    </ul>
+    <button onclick="addLocalData();">add locatl data</button>
+    <button onclick="addSessionData();">add session data</button>
+
+    <script>
+        let num = 0;
+
+        const score = [];
+        function Apple(color, price){
+            this.color= color;
+            this.price = price;
+        }
+
+        Apple.prototype.toString = function(){
+            return `${this.color}/${this.price}`;
+        }
+
+        //setItem(key, value): 스토리지에 데이터 추가
+        function addLocalData() {
+        localStorage.setItem('user','KHJ');
+        localStorage.setItem('score',1380);
+        localStorage.setItem('apple',new Apple('red',900))
+        
+
+        }
+       
+        function addSessionData(){
+        sessionStorage.setItem('sound ',70);
+        sessionStorage.setItem('quality', 'high');
+        }
+        
+
+        //getItem(key) : 원하는 값을 꺼낸다
+        console.log('local storage data : ',localStorage.getItem('score'));
+        console.log('session storage data : ',sessionStorage.getItem('quality'));
+
+        //removeItem(key) : 원하는 값을 삭제한다
+
+        (function removeScoreData(){
+            const removed = localStorage.removeItem('score');
+        })();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 그리기</title>
+</head>
+<body>
+
+    <h3> # table tage</h3>
+
+    <p>
+        - &lt;table &gt; : 표 전체를 나타내느 태그<br>
+        - &lt;tr &gt; : table row. 해당 테이블에 한 행을 추가한다<br>
+        - &lt;td &gt; : table data. 해당 행에 일반 칸을 추가한다<br>
+        - &lt;th &gt; : table header. 해당 행에 제목 칸을 추가한다<br>
+
+    </p>
+
+    <hr>
+
+    <table border = "3">
+        <caption>회원 정보 테이블</caption>
+        <tr><!-- table row-->
+            
+            <th>이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+        </tr>
+        <tbody>    
+        <tr>
+            <td>John</td><!-- table data-->
+            <td>23</td>
+            <td>123-1234-1234</td>
+
+        </tr>
+        
+        <tr>
+            <td>Mike</td>
+            <td>33</td>
+            <td>234-2345-2345</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <!--
+        colspan : 해당 칸이 몇 열을 차지해야 하는지 설정한다.
+        rowspan : 해당 칸이 몇 행을 차지해야 하는지 설정한다.
+
+    -->
+        <table border="1">
+
+        <tr>
+            <td colspan="2">Name</td>
+            <td>Age</td>
+            
+        </tr>
+        <tr>
+            <td>King</td>
+            <td>Steven</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td rowspan="3">Doe</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Giselle</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Mike</td>
+            <td>2</td>
+        </tr>
+
+        </table>
+
+        <hr>
+        <table  border="1">
+            <tr>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+                <th>Header</th>
+                
+            </tr>
+            <tbody>
+            <tr>
+                <td rowspan="5">span rows</td>
+                <td colspan="3">span coulmns</td>
+                
+            </tr>
+
+            <tr>
+                <td colspan="2">span coulmns</td>
+                <td rowspan="4">span both</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">span rows</td>
+                <td>span coulmns</td>
+            <tr>
+               
+            <tr > 
+                <td rowspan="2" >span <br> both</td> 
+            </tr>
+           
+
+            </tbody>
+        </table>
+
+
+        <hr>
+        <div style="text-align:center">
+        <table  border="1" width="700" >
+            <tr>
+                <th colspan="6" >Time Table</th>
+                
+            </tr>
+            <tr>
+                <td rowspan = "6"><strong>Hours</strong></td>
+                <td><strong>Mon</strong></td>
+                <td><strong>Tue</strong></td>
+                <td><strong>Wed</strong></td>
+                <td><strong>Thu</strong></td>
+                <td><strong>Fri</strong></td>
+                
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Arts</td>
+                
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Arts</td>
+            </tr>
+            <tr>
+                <td colspan="5"><Strong>LUNCH</Strong></td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+               
+                <td rowspan = "2">Project</td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>Maths</td>
+                <td>Science</td>
+                <td>Maths</td>
+                
+                
+            </tr>
+
+        </table>
+    </div>
+
+        <hr>
+
+    
+</body>
+</html>

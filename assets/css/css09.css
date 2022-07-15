@@ -1,0 +1,154 @@
+html{
+    font-size: 30px;
+}
+#shadow1{
+    text-shadow: 3px 3px 3px black;
+    text-transform: capitalize;
+}
+#shadow2{
+    background-color: black;
+    color : white;
+    padding:5px;
+    text-shadow:1px 1px 3px white,
+                2px 2px 4px lime,
+                3px 3px 15px lightseagreen;
+}
+
+#shadow3{
+    font-size: 150px;
+    text-shadow : 10px 10px 10px red,
+                  20px 20px 20px black,
+                  30px 30px 30px red;
+}
+
+
+#box-shadow1{
+    box-shadow: 0 0 10px 4px #FF6347,
+    0 0 10px 30px #FFDAB9,
+    30px 0 20px 30px #B0E0E6;
+    font-size: 50px;
+    border: solid 2px black;
+    text-align: center;
+    color: white;
+	text-shadow: 0 0 3px #F10D58, 0 0 7px #4578D5;
+
+}
+#box-shadow2{
+    box-shadow: 0 0 10px 4px rgb(44, 44, 173),
+    0 0 10px 10px #004175,
+    30px 0 10px 10px #B0E0E6;
+    font-size: 40px;
+    border: solid 2px black;
+    text-align: center;
+    color: white;
+	text-shadow: 0 5px 20px rgb(43, 22, 163), 0 0 7px #000000;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+.loginButton {
+    background: -moz-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(90deg, #0459B7, #08ADFF) repeat scroll 0 0 transparent;
+    border: 1px solid #093C75;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: -1em;
+    margin-top: 1em;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #333333;
+    text-transform: uppercase;
+
+}
+.loginButton:hover {
+            background: -moz-linear-gradient(90deg, #067CD3, #0BCDFF) repeat scroll 0 0 transparent;
+            background: -webkit-linear-gradient(90deg, #067CD3, #0BCDFF) repeat scroll 0 0 transparent;
+        border-color: #093C75;
+        text-decoration: none;
+}
+.loginButton:active {
+    background: -moz-linear-gradient(90deg, #0BCDFF, #067CD3) repeat scroll 0 0 transparent;
+    background: -webkit-linear-gradient(90deg, #0BCDFF, #067CD3) repeat scroll 0 0 transparent;
+    border-color: #093C75;
+    outline: medium none;;  
+}
+.loginWarning {
+    padding-top: 0.2em;
+    font-family: 'Aldrich', sans-serif;
+    color:#FE2E2E;
+    font-size: 12px;
+    font-weight: 400;
+}
+.loginField {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    border: 0;
+    background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    border: 1px solid #AAAAAA;
+        border-radius: 10px 10px 10px 10px;
+            box-shadow: 0 0 15px #AAAAAA;
+        margin: 60px auto 0;
+        padding: 20px;
+}
+.loginField legend {
+    text-align: right;
+    background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+    border-radius: 10px 10px 10px 10px;
+            box-shadow: 0 0 15px #AAAAAA;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.loginField img {
+    max-width: 24px;
+}
+
+.loginVerticalPanel {
+    margin: 0 auto 0 auto;      
+}
+.loginVerticalPanel input {
+    background: -webkit-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+    background: -moz-linear-gradient(90deg, #FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+    border: 1px solid #AAAAAA;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 3px #AAAAAA;
+    padding: 5px;
+}
+
+
+.mybar{
+    background-color: black;
+    width: 1000px;
+    height: 100px;
+    clip-path: polygon(0 0,100% 0%,95% 100%,5% 100%);
+    padding: 0px; 
+    color: white;
+	text-shadow: 0 0 3px #F10D58, 0 0 7px #4578D5;
+    text-align: center; 
+    font-size: 80px;
+
+}
+
+.forshadow {
+    filter: drop-shadow(0 0 0.45rem #ac04cb);
+}

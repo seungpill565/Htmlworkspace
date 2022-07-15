@@ -1,0 +1,619 @@
+.logo{
+    display:  grid;
+    background-color:transparent;
+     grid-template-columns: 200px 480px  ;
+    
+
+     position: absolute;
+      top:10px; 
+        
+}
+
+
+.logo-logo{
+color:white;
+text-transform: uppercase;
+margin: 0;
+font-size: 5.5rem;
+font-weight: 300;
+line-height: 1.2;
+margin-bottom: 0.5rem;
+font-weight: 500;
+line-height: 1.2; 
+margin-bottom: 0.5rem;
+font-family: 'Oswald,sans-serif',sans-serif;
+font-weight: 500;
+line-height: 1.2;
+font-weight: bold;
+}
+.logo-button{
+  /* flex-direction: row; */
+  /* margin-left: auto; */
+  text-decoration: none;
+  padding: 1.5rem;
+  background-color:rgb(43, 44, 44);
+  /* color:white; */
+  color: white;
+  /* box-sizing: border-box; */
+  font-size: 1.6rem;
+  font-weight: 600;
+    position: absolute; 
+  left: 973px;  
+  display:  grid;
+  grid-template-columns: 130px 150px 200px 130px  130px 130px;
+
+}
+
+#tag1:link{
+   color: red;
+   text-decoration: none;
+}
+#tag1:visited{
+    color: red;
+    text-decoration: none;
+}#tag:link{
+    color: white;
+    text-decoration: none;
+}
+#tag:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.image{
+    position: absolute;
+}
+
+.image-img1{
+    width: 1890px;
+    height: 1000px;
+}
+
+.image-div1{
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+    position: absolute;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    top: 45%;
+    left: 41%;
+}
+
+.image-div2{
+    font-size: 80px;
+    font-weight: bold;
+    position: absolute;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    color: white;
+    top: 53%;
+    left: 32%;
+}
+
+.image-button{
+    position: absolute;
+    top: 70%;
+    left: 43%;
+    font-size: 25px;
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+    background-color: transparent;
+    border-color: white;
+    
+    
+}
+
+.bodybuilding{
+    position: absolute;
+    top: 100%;
+    left: 18%;
+    width: 600px;
+    height: 430px;
+    border: solid 2px #E41C26;
+    background-color: #E41C26
+
+
+}
+.bodybuilding-logo{
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+}
+.bodybuilding-text{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 15px;
+    color: white;
+}
+
+.bodybuilding-img{
+    position: absolute;
+    width: 190px;
+    top: 55%;
+    left: 0%;
+}
+
+.bodybuilding-button{
+    position: absolute;
+    top: 65%;
+    left: 70%;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+
+}
+/*musclemuilding*/
+
+.musclemuilding{
+    position: absolute;
+    top: 100%;
+    left: 49.7%;
+    width: 600px;
+    height: 430px;
+    border: solid 2px rgb(17, 17, 17);
+    background-color: rgb(17, 17, 17);
+
+
+}
+.musclemuilding-logo{
+    position: absolute;
+    top: 20%;
+    left: 23%;
+    font-weight: bold;
+    font-size: 60px;
+    color: white;
+}
+.musclemuilding-text{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    font-size: 15px;
+    color: white;
+}
+
+.musclemuilding-img{
+    position: absolute;
+    width: 190px;
+    top: 59%;
+    left: 62%;
+}
+
+.musclemuilding-button{
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background-color: transparent;
+    border-color: white;
+
+}
+
+
+/*peopple-img*/
+.people-img{
+    position: absolute;
+    top: 150%;
+    left: 19.7%;
+
+}
+
+.History{
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    width: 500px;
+}
+
+.History-logo{
+    font-weight: bold;
+    font-size: 50px;
+    color: rgb(59, 59, 59);
+}
+.History-text{
+    position: absolute;
+    top: 160%;
+    color: rgb(59, 59, 59);
+}
+
+/*img-panel1*/
+.img-panel1{
+
+    position: absolute;
+    top: 178%;
+    left: 50%;
+    width: 230px;
+}
+.img-panel1-logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+
+.img-panel1-text{
+    color: rgb(59, 59, 59);
+    position: absolute;
+    top: 118%;
+}
+.img-panel1-button{
+    position: absolute;
+    top: 158%;
+    left: 10px;
+    font-size: 18px;
+    color: red;
+    background-color: transparent;
+    padding: 15px;
+    border-color: red;
+
+}
+
+/*img-panel2*/
+
+.img-panel2{
+    position: absolute;
+    top: 178%;
+    left: 64%;
+    width: 230px;
+
+}
+.img-panel2-logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+}
+.img-panel2-text{
+    color: rgb(59, 59, 59);
+    position: absolute;
+    top: 118%;
+}
+
+
+/*grid2*/
+
+.grid2{
+    display:  grid;
+    grid-template-columns: 620px 620px 620px  ;
+    position: absolute;
+    top: 218%;
+
+}
+
+/*progression*/
+
+.progression{
+    border: solid 2px rgb(17, 17, 17);
+    background-color:rgb(17, 17, 17);
+    height: 250px;
+    
+}
+
+.progression-logo{
+    position: absolute;
+    top: 35%;
+    left: 140px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.progression-text{
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 140px;
+}
+.progression-img{
+    position: absolute;
+    left: 2%;
+    top:33%;
+}
+
+
+/*workout*/
+.workout{
+    border: solid 2px #E41C26;
+    background-color:#E41C26;
+    height: 250px;
+    
+}
+
+.workout-logo{
+    position: absolute;
+    top: 35%;
+    left: 800px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+}   
+.workout-text{
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 43%;
+}
+.workout-img{
+    position: absolute;
+    left: 37%;
+    top:33%;
+}
+
+/*nutrition*/
+
+.nutrition{
+    border: solid 2px rgb(17, 17, 17);
+    background-color:rgb(17, 17, 17);
+    height: 250px;
+    
+}
+
+.nutrition-logo{
+    position: absolute;
+    top: 35%;
+    left: 1410px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+
+}
+
+.nutrition-text{
+    font-weight: 500;
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 76%;
+}
+.nutrition-img{
+    position: absolute;
+    left: 70%;
+    top:33%;
+}
+
+.CT{
+    position: absolute;
+    top: 248%;  
+    left: 43%;
+    font-size: 30px;
+    color: red;
+    font-weight: 600;
+}
+.whct{
+    position: absolute;
+    top: 256%;
+    left:31%;
+    font-size: 50px;
+    color: rgb(41, 41, 48);
+    font-weight: bold;
+}
+
+.gird3{
+    position: absolute;
+    display:  grid;
+    grid-template-columns: 150px 100px 100px 100px ;
+    top: 268%;
+    left:37%;
+}
+.ALL-Classes{
+    font-size: 25px;
+    background-color: red;
+    color: white;
+    text-align : center;
+}
+
+.Cardio{
+    font-size: 25px;
+    color: red;
+    text-align : center;
+}
+.Crosfit{
+    font-size: 25px;
+    color: red;
+    text-align : center;
+}
+
+.Powerlifting{
+    font-size: 25px;
+    color: red;
+    text-align : center;
+}
+
+
+/*table*/
+.table{
+    position: absolute;
+    top: 280%;
+    left:15%;
+    width: 300px;
+}
+
+.tg  {
+    border-collapse:collapse;border-spacing:0;
+}
+.tg td{
+    border-color:black;border-style:solid;
+    border-width:1px;font-family:Arial, sans-serif;
+    font-size:20px;
+    overflow:hidden;padding:10px 5px;word-break:normal;
+    margin: auto;
+}
+.tg th{
+    border-color:black;
+    border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+    font-weight:normal;
+    overflow:hidden;padding:10px 5px;word-break:normal;
+    margin: auto;
+}
+.tg .tg-baqh{
+    text-align:center;
+    vertical-align:top;
+    margin: auto;
+}
+.tg .tg-nlhk{
+    background-color:#000000;border-color:inherit;color:#ffffff;
+    font-weight:bold;text-align:center;
+    vertical-align:top;
+    margin: auto;
+}
+.tg .tg-yf2n{
+    background-color:black;color:#ffffff;font-weight:bold;
+    text-align:center;vertical-align:top;
+    margin: auto;
+    font-size: 20px;
+}
+.tg .tg-m1tb{background-color:#000000;color:#ffffff;
+    font-weight:bold;
+    text-align:center;vertical-align:top;
+    margin: auto;
+}
+.tg .tg-0lax{
+    text-align:left;
+    vertical-align:top;
+    margin: auto;
+}
+.tg .tg-6y75{
+    background-color:#000000;
+    color:#ffffff;font-weight:bold;
+    text-align:left;vertical-align:top;
+    margin: auto;
+}
+
+.img4{
+    position: absolute;
+    top: 340%;
+    
+    
+
+}
+.img4>*{
+    width: 1890px;
+    height: 600px;
+    opacity: 1.2;
+}
+
+.grid4{
+    display: grid;
+    grid-template-columns: 500px 500px  500px 500px ;
+    position: absolute;
+    top: 350%;
+    left: 3%;
+}
+.g1{
+    font-size: 30px;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-weight: bold;
+    color: red;
+
+}
+
+
+.g2{
+    font-size: 30px;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+
+.g3{
+    font-size: 30px;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+
+.g4{
+    font-size: 30px;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-weight: bold;
+    color: red;
+}
+
+.g1-text{
+    position: absolute;
+    font-weight: 600;
+    top: 358%;
+    left: 3.5%;
+
+}
+.g1-text>*{
+    color: white;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-size: 20px;
+}
+
+.g2-text{
+    position: absolute;
+    font-weight: 600;
+    top: 357%;
+    left: 30%;
+}
+.home{
+    color: white;
+    font-family: 'Oswald,sans-serif',sans-serif;
+    font-size: 20px; 
+}
+.g3-text{
+    position: absolute;
+    font-weight: 600;
+    top: 357%;
+    left: 56%;
+}
+
+.g4-text{
+    position: absolute;
+    top: 357%;
+    left: 83%;
+}
+.g4-text>*{
+    color: white;
+    font-family: 'Oswald,sans-serif',sans-serif;
+}
+.g4-1,.g4-3{
+    font-size: 20px;
+    font-weight: bold;
+}
+.g4-2, .g4-4{
+    font-weight: 600px;
+}
+
+.g5-text{
+    position: absolute;
+    top: 400%;
+    left: 35%;
+}
+.g5-text>*{
+    font-size: 20px;
+    font-weight: bold;
+    color: white; 
+}
+
+.g1-button{
+    position: absolute;  
+    top: 380%;
+    left: 3%;
+}
+
+
+
+

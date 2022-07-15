@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+
+    <h3># 자바스크립트 연산자</h3>
+
+    <ul>
+        <li>자바와 거의 유사하다</li>
+        <li>==,!= : 값만 비교</li>
+        <li>===, !== " 값과 타입까지 비교</li>
+    </ul>
+
+    <script>
+        console.log(5 / 2);
+        console.log(parseInt( 5 / 2)); // 몫만 구하고 싶을때
+
+        console.log(5 % 3);
+
+        console.log(1 == '1');//true
+        console.log(123 == '123');
+
+        console.log(1 ==='1') // false
+        console.log(123 ==='123');
+
+        console.log(1 != '1');//flase
+        console.log(1 !== '1')// ture
+
+        //삼황
+        apple = 44;
+        console.log(apple % 10 > 0 ? parseInt( apple/10+1) : parseInt( apple /10));
+        
+    </script>
+    
+</body>
+</html>

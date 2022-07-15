@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+
+    <h3># 자바스크립트에도 반복문이 있다</h3>
+
+    <script>
+        for(var i = 0; i<100; ++i){
+            console.log(i);
+        }
+
+        const animals = ['cat','dog','ctr','cat','cat','dog'];
+        const human ={
+            name : '김철수',
+            age : '15',
+            hobbies: ['축구','농구','수영']
+        };
+
+
+        //`` : javascript String format
+        for(var i = 0; i<animals.length;++i){
+            console.log(`${i}번째 동물 ${animals[i]}`);
+        }
+
+        //for..in array
+        for(var index in animals){
+            console.log(animals[index]);
+        }
+
+        //for..in object
+        for(key in human){
+            
+            console.log(`${key} = ${human[key]}`);
+        }
+        let num = 1;
+
+        //while
+        while(true){
+            console.log(num *=2);
+
+            if(num > 1000000000){
+                break;
+            }
+        }   
+
+    </script>
+    
+</body>
+</html>

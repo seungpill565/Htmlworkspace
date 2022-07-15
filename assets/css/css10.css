@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gugi&family=Hi+Melody&family=Nanum+Brush+Script&family=Rozha+One&family=Single+Day&family=Song+Myung&family=Zhi+Mang+Xing&display=swap');
+
+
+
+
+html{
+    font-size: 30px;
+}
+#pangram1{
+    font-family: '궁서체','바탕체','돋움','Consolas';
+}
+
+
+#pangram2{
+    font-family: 'Hi Melody', cursive;
+    text-transform: capitalize;
+    font-size : 2.0rem;
+    word-spacing: 1.1rem;
+}
+
+ul>li{
+    font-family: 'Hi Melody', cursive;
+    text-transform: capitalize;
+
+}
+
+#pangram3{
+    font-family: 'Black Han Sans', sans-serif;
+    text-transform: capitalize;
+    font-size : 1.1rem;
+    word-spacing: 1.1rem;
+}
+#pangram4{
+    font-family: 'Gugi', cursive;
+    text-transform: capitalize;
+    font-size : 1.1rem;
+    word-spacing: 1.1rem;
+}
+#pangram5{
+    font-family: 'Song Myung', serif;
+    text-transform: capitalize;
+    font-size : 1.1rem;
+    word-spacing: 1.1rem;
+}
+#pangram6{
+    font-family: 'Single Day', cursive;
+    text-transform: capitalize;
+    font-size : 1.1rem;
+    word-spacing: 1.1rem;
+}
+#pangram7{
+    font-family: 'Nanum Brush Script', cursive;
+    text-transform: capitalize;
+    font-size : 1.1rem;
+    word-spacing: 1.1rem;
+}
+#pangram8{
+    font-family: 'Zhi Mang Xing', cursive;
+    text-transform: capitalize;
+    font-size : 2.0rem;
+    word-spacing: 1.1rem;
+}
+#pangram9{
+    font-family: 'Rozha One', serif;
+    text-transform: capitalize;
+    font-size : 2.0rem;
+    word-spacing: 1.1rem;
+}

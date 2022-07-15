@@ -1,0 +1,73 @@
+.flex-container{
+    display: flex;
+    background-color: rgb(54, 1, 104); /* #123456, 색 이름, rgb(r,g,b)*/
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.flex-container>*{
+    background-color: rgb(247, 200, 113);
+    padding: 20px;
+    font-size: 20px;
+    
+}
+
+#container1 >*{
+    width: 20%;
+    margin: 5px;
+    height: 300px;
+    
+}
+
+
+#direction-row{
+    flex-direction: row-reverse;
+    
+}
+
+#direction-row>*{
+    margin: 5px;
+}
+
+#direction-column{
+    flex-direction: column-reverse;
+   
+}
+
+#direction-column>*{
+    width: 50%;
+    margin-bottom: 5px;
+
+}
+ul.flex-container{
+    list-style: none;
+}
+.nowrap{
+    flex-wrap:nowrap;
+}
+
+.nowrap li{
+    background-color: tomato;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+.wrap li{
+    background-color: gold;
+}
+
+.wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+
+.wrap-reverse li{
+    background-color: dodgerblue;
+}
+.flex-item{
+    padding: 5px;
+    height: 80px;
+
+    width: 100px;
+    margin: 5px;
+}

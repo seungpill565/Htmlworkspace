@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 처리</title>
+    <link rel="stylesheet" href="../assets/css/js10.css">
+</head>
+<body>
+
+    <h3># Javascript Event</h3>
+
+    <ul>
+        <li>모든 Html 요소에는 이벤트를 추가할 수 있다</li>
+        <li>HTML 속성으로 이벤트를 추가하는 방식과 
+            javascript로 이벤트를 추가하는 방식이 있다</li>
+    </ul>
+
+    <h3># Html 이벤트 속성으로 추가하기</h3>
+
+    <div id="event1"
+    onclick = "this.innerText = '왜 클릭하셨죠?';"
+    onmouseover = "this.innerText = '마우스를 올리셨네요';"
+    onmouseleave = "this.innerText='안녕히가세요';">안녕하세요</div>
+
+    <h3># 자바 스크립트로 이벤트 추가하기</h3>
+
+    <div id="event2">안녕하세요</div>
+
+    <script>
+
+        const eventDiv = document.getElementById('event2');
+
+       //가져온 요소에 직접 이벤트 속성 추가하기
+        const myClickevent = (e) =>{
+            console.log(e);
+        eventDiv.innerText="클릭되었습니다.";
+        };
+       eventDiv.onclick = myClickevent;
+       
+       //가져온 요소의 addEventListner() 메서드 사용하기
+        const myMouserOverEvent = (e)=>{
+        console.log(e);
+        eventDiv.innerText="마우스를 올리셨습니다.";
+        }
+
+        //하나의 이벤트에 여러 리스너를 달 수 있다.
+        const myMouserOverEvent2 = (e)=>{
+        eventDiv.style = 'background-color: red';
+        }
+
+        const myMouserOverEvent3 = (e)=>{
+        eventDiv.style = 'color: blue';
+        }
+        
+
+       eventDiv.addEventListener('mouseover', myMouserOverEvent);
+       eventDiv.addEventListener('mouseover', myMouserOverEvent2);
+       eventDiv.addEventListener('mouseover', myMouserOverEvent3);
+      
+       //이벤트 제거하기
+       // - addEventListner()를 통해 추가된 이벤트만 제거할 수 있다
+       // - 이벤트를 제거하기 위해서는 해당 콜백 함수까지 함께 전달해야 한다
+       // - 하나의 이벤트 종류에 여러 리스너를 달 수 있으므로 어떤 리스너를 제거할 지 명시해야 한다
+       
+       eventDiv.removeEventListener('click',myClickevent); // addEventListner 로 하지않아서 제거안됨
+       eventDiv.removeEventListener('mouseover', myMouserOverEvent);
+       eventDiv.removeEventListener('mouseover', myMouserOverEvent2);
+       
+    </script>
+    
+</body>
+</html>
